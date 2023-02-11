@@ -91,4 +91,6 @@ const levenshtein = ( a: string, b: string ): number => {
 
 };
 
+/* EXPORT */
+
 export default levenshtein;

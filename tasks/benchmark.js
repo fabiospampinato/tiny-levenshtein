@@ -2,35 +2,24 @@
 /* IMPORT */
 
 import benchmark from 'benchloop';
-import {distance as fastestLevenshtein} from 'fastest-levenshtein';
-import tinyLevenshtein from '../dist/index.js';
+import levenshtein from '../dist/index.js';
 
 /* MAIN */
 
-benchmark.defaultOptions = Object.assign ( benchmark.defaultOptions, {
-  log: 'compact'
+benchmark ({
+  name: 'short',
+  iterations: 100000,
+  fn: () => {
+    levenshtein ( 'distance', 'difference' );
+  }
 });
 
-for ( const [name, fn] of [['tiny-levenshtein', tinyLevenshtein], ['fastest-levenshtein', fastestLevenshtein]] ) {
+benchmark ({
+  name: 'long',
+  iterations: 10,
+  fn: () => {
+    levenshtein ( 'distance'.repeat ( 100 ), 'difference'.repeat ( 100 ) );
+  }
+});
 
-  benchmark.group ( name, () => {
-
-    benchmark ({
-      name: 'short',
-      iterations: 100000,
-      fn: () => {
-       fn ( 'distance', 'difference' );
-      }
-    });
-
-    benchmark ({
-      name: 'long',
-      iterations: 10,
-      fn: () => {
-       fn ( 'distance'.repeat ( 100 ), 'difference'.repeat ( 100 ) );
-      }
-    });
-
-  });
-
-}
+benchmark.summary ();
