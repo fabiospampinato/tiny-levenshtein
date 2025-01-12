@@ -3,7 +3,7 @@
   "repository": "github:fabiospampinato/tiny-levenshtein",
   "description": "A tiny implementation of the Levenshtein edit distance algorithm.",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
