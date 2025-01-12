@@ -5,13 +5,15 @@ A tiny implementation of the Levenshtein edit distance algorithm.
 ## Install
 
 ```sh
-npm install --save tiny-levenshtein
+npm install tiny-levenshtein
 ```
 
 ## Usage
 
 ```ts
 import levenshtein from 'tiny-levenshtein';
+
+// Let's compute the Levenshtein edit distance between two strings
 
 levenshtein ( 'kitten', 'sitting' ); // => 3
 ```
