@@ -1,8 +1,6 @@
 
 /* MAIN */
 
-//TODO: Maybe publish this as uint-matrix or typed-matrix or something
-
 class Matrix {
 
   /* VARIABLES */
@@ -36,12 +34,6 @@ class Matrix {
     const index = ( row * this.columns ) + column;
 
     return this.buffer[index] = value;
-
-  }
-
-  reset (): void {
-
-    this.buffer.fill ( 0 );
 
   }
 
