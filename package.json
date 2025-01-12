@@ -2,6 +2,7 @@
   "name": "tiny-levenshtein",
   "repository": "github:fabiospampinato/tiny-levenshtein",
   "description": "A tiny implementation of the Levenshtein edit distance algorithm.",
+  "license": "MIT",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",
@@ -24,9 +25,9 @@
     "distance"
   ],
   "devDependencies": {
-    "benchloop": "^2.1.0",
-    "fava": "^0.2.0",
-    "tsex": "^3.0.0",
-    "typescript": "^5.1.6"
+    "benchloop": "^2.1.1",
+    "fava": "^0.3.4",
+    "tsex": "^4.0.2",
+    "typescript": "^5.7.3"
   }
 }
